@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Nodejs</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Articles <strong><span class="text-success">Nodejs</span></strong></a>
+            <div class="navbar-nav d-flex flex-row">
+                <a class="nav-link me-3" href="/">Home</a>
+                <a class="nav-link" href="/articles/new">New Article</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>New Article</h1>
+        <form action="/articles/new" method="POST">
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input type="text" name="title" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Author</label>
+                <input type="text" name="author" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Content</label>
+                <textarea name="body" class="form-control" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Article</button>
+        </form>
+    </div>
+</body>
+</html>

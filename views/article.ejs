@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Nodejs</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Articles <strong><span class="text-success">Nodejs</span></strong></a>
+            <div class="navbar-nav d-flex flex-row">
+                <a class="nav-link me-3" href="/">Home</a>
+                <a class="nav-link" href="/articles/new">New Article</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="article-container">
+            <h1><%= article.title %></h1>
+            <div class="text-muted mb-4">By <%= article.author %></div>
+            <div class="article-content mb-4">
+                <%= article.body %>
+            </div>
+            <div class="d-flex gap-2">
+                <a href="/articles/<%= article._id %>/edit" class="btn btn-primary">Edit</a>
+                <form action="/articles/del/<%= article._id %>" method="POST" style="display: inline;">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
