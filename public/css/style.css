@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa;
+}
+.card {
+    height: 100%;
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.article-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 315px) {
+    div.container{
+        
+    }
+}
