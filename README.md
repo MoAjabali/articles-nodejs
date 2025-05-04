@@ -69,7 +69,7 @@ articles-nodejs/
 ## 🚀 Installation
 1. Clone the repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/MoAjabali/articles-nodejs
 cd articles-nodejs
  ```
 
@@ -86,7 +86,7 @@ npm install
 npm run dev
  ```
 
-The application will be available at ```http://localhost:3000```
+The application will be available at ```https://articles-nodejs-8akj.onrender.com```
 
 ## 📡 API Endpoints
 ### Page Routes
