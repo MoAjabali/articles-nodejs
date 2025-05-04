@@ -3,13 +3,14 @@ const app = express();
 const mongoose = require('mongoose');
 // The collections
 const Article = require('./models/Article');
+require('dotenv').config();
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // to get data from form as JSON
 app.use(express.static('public'));
 // Connect to db
-mongoose.connect('mongodb+srv://<username>:<password>@article-nodejs.c9vr3wf.mongodb.net/?retryWrites=true&w=majority&appName=article-nodejs').then(
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@article-nodejs.c9vr3wf.mongodb.net/?retryWrites=true&w=majority&appName=article-nodejs`).then(
   ()=> console.log("connected")
 ).catch(
   ()=> console.log('failed to connect')
