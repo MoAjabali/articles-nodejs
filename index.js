@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // to get data from form as JSON
 app.use(express.static('public'));
 // Connect to db
-mongoose.connect('mongodb://127.0.0.1:27017/nodejsdb').then(
+mongoose.connect('mongodb+srv://<username>:<password>@article-nodejs.c9vr3wf.mongodb.net/?retryWrites=true&w=majority&appName=article-nodejs').then(
   ()=> console.log("connected")
 ).catch(
   ()=> console.log('failed to connect')
